@@ -1,11 +1,11 @@
 
 # 🩺 ECG Signal Classification using Machine Learning
 
-This project uses machine learning to classify ECG (Electrocardiogram) signals as **normal** or **abnormal** using real heartbeat data. It was inspired by the idea of using AI in predictive healthcare — helping detect irregular heart activity automatically using signal data.
+I did this project using machine learning to classify ECG (Electrocardiogram) signals as **normal** or **abnormal** using real heartbeat data. It was inspired by the idea of using AI in predictive healthcare — helping detect irregular heart activity automatically using signal data.
 
 ---
 
-## 📂 Dataset Used
+##  Dataset Used
 
 The project uses ECG datasets from the **PTB Diagnostic ECG Database**. The files used are:
 - `ptbdb_normal.xlsx` – contains normal ECG signals
@@ -15,7 +15,7 @@ Each row in these files contains 187 numerical values representing a patient's h
 
 ---
 
-## 🧠 Project Steps
+##  Project Steps
 
 ### 1. **Data Loading**
 The normal and abnormal datasets were loaded using pandas and combined into one large dataset. Each sample was labeled:
@@ -57,7 +57,7 @@ This shows strong potential for ECG classification using traditional machine lea
 
 ---
 
-## 🛠️ Requirements
+##  Requirements
 
 Install dependencies using:
 ```bash
@@ -66,12 +66,12 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 How to Run the Project
+##  How I ran the Project
 
-1. Clone the repository
-2. Activate your virtual environment
-3. Install the requirements
-4. Run the Jupyter notebook:
+1. Cloning the repository
+2. Activating my virtual environment
+3. Installing the requirements
+4. Running the Jupyter notebook:
 ```bash
 jupyter notebook
 ```
@@ -79,26 +79,12 @@ jupyter notebook
 
 ---
 
-## 💾 Files in This Repo
-
-| File | Description |
-|------|-------------|
-| `notebook.ipynb` | Main Jupyter notebook with training + evaluation |
-| `ecg_classifier_model.pkl` | Saved model after training |
-| `requirements.txt` | Python package dependencies |
-| `README.md` | Project overview |
-| `data/` | Contains the raw `.xlsx` ECG data files |
-
----
-
-## 🙌 Acknowledgements
+##  Acknowledgements
 
 - PTB Diagnostic ECG Database (MIT-BIH / Physionet)
 - scikit-learn team for Random Forest implementation
 
 ---
-
-## 📌 Author Notes
 
 This project was built as a machine learning showcase for predictive diagnostics. It shows how classical ML models like Random Forest can be applied to biomedical signal classification, paving the way for more complex future models like CNNs or LSTMs for time series.
 
