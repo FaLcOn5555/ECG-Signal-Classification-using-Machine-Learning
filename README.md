@@ -50,8 +50,22 @@ The model's performance was **perfect**:
 
 - ✅ Accuracy: **100%**
 - ✅ Precision, Recall, F1-score: **All 1.00**
+- 
+Accuracy: 1.0
 
----
+Confusion Matrix:
+ [[ 787    0]
+ [   0 2123]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       787
+           1       1.00      1.00      1.00      2123
+
+    accuracy                           1.00      2910
+    macro avg       1.00      1.00      1.00      2910
+    weighted avg       1.00      1.00      1.00      2910
 
 ## 🖼️ Screenshots
 
