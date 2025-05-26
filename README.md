@@ -1,90 +1,76 @@
-
 # 🩺 ECG Signal Classification using Machine Learning
 
-I did this project using machine learning to classify ECG (Electrocardiogram) signals as **normal** or **abnormal** using real heartbeat data. It was inspired by the idea of using AI in predictive healthcare — helping detect irregular heart activity automatically using signal data.
+I did this project using machine learning to classify ECG (Electrocardiogram) signals as **normal or abnormal** using real heartbeat data. It was inspired by the idea of using AI in predictive healthcare — helping detect irregular heart activity automatically using signal data.
 
 ---
 
-##  Dataset Used
+## 📂 Dataset Used
 
 The project uses ECG datasets from the **PTB Diagnostic ECG Database**. The files used are:
-- `ptbdb_normal.xlsx` – contains normal ECG signals
-- `ptbdb_abnormal.xlsx` – contains abnormal ECG signals
+- `ptbdb_normal.xlsx` – contains normal ECG signals  
+- `ptbdb_abnormal.xlsx` – contains abnormal ECG signals  
 
-Each row in these files contains 187 numerical values representing a patient's heartbeat signal.
+Each row in these files contains **187 numerical values** representing a patient's heartbeat signal.
 
 ---
 
 ##  Project Steps
 
-### 1. **Data Loading**
-The normal and abnormal datasets were loaded using pandas and combined into one large dataset. Each sample was labeled:
-- `0` for normal
-- `1` for abnormal
+### 1. 🧾 Data Loading
+- Loaded the normal and abnormal ECG datasets using pandas
+- Each sample was labeled:
+  - `0` → normal
+  - `1` → abnormal
 
-### 2. **Preprocessing**
-- Labeled both datasets with a `label` column
-- Concatenated them into a single DataFrame
-- Shuffled the rows randomly to ensure unbiased training
+### 2.  Preprocessing
+- Added a `label` column to both datasets
+- Combined both into a single DataFrame
+- Shuffled the rows randomly for unbiased learning
 
-### 3. **Splitting the Data**
-- Used `train_test_split()` to divide the dataset into:
-  - **80% for training**
-  - **20% for testing**
+### 3.  Splitting the Data
+- Used `train_test_split()` to divide the data:
+  - 80% for training  
+  - 20% for testing
 
-### 4. **Model Training**
-- A **RandomForestClassifier** was trained using the ECG signal data.
-- The classifier learned to distinguish between normal and abnormal patterns.
+### 4.  Model Training
+- Trained a **RandomForestClassifier** using the signal data  
+- The model learned to detect patterns in ECG signals
 
-### 5. **Model Evaluation**
-The model achieved **100% accuracy** on the test set (note: this might suggest a very clean or easy dataset).
-- Accuracy score
-- Confusion matrix
-- Precision, recall, F1-score
-
-### 6. **Saving the Model**
-- Used `joblib` to save the trained model as `ecg_classifier_model.pkl`.
+### 5.  Model Evaluation
+- The model achieved **100% accuracy** on the test set  
+- Evaluated using:
+  - Accuracy score
+  - Confusion matrix
+  - Precision, recall, and F1-score
 
 ---
-
 ## 📊 Results
 
-The model's performance was excellent:
-- **Accuracy**: 100%
-- **Precision/Recall/F1**: All perfect scores on both normal and abnormal classes
+The model's performance was **perfect**:
 
-This shows strong potential for ECG classification using traditional machine learning.
+- ✅ Accuracy: **100%**
+- ✅ Precision, Recall, F1-score: **All 1.00**
 
 ---
 
-##  Requirements
+## 🖼️ Screenshots
 
-Install dependencies using:
+### 📊 Normal vs Abnormal ECG Samples
+![ECG Training Samples](screenshots/data_training.png)  
+> Shows first 5 rows of normal and abnormal ECG data used for training.
+
+### 📐 Merged Dataset Overview
+![Dataset Shape](screenshots/dataset_shape.png)  
+> Combined dataset with over 14,000 samples and 310 features.
+
+### 📈 Final Model Evaluation
+![Results Output](screenshots/result_data.png)  
+> Model performance showing 100% accuracy and perfect classification report.
+
+---
+
+## 🛠️ Requirements
+
+Install the dependencies using:
 ```bash
 pip install -r requirements.txt
-```
-
----
-
-##  How I ran the Project
-
-1. Cloning the repository
-2. Activating my virtual environment
-3. Installing the requirements
-4. Running the Jupyter notebook:
-```bash
-jupyter notebook
-```
-5. Open and execute `notebook.ipynb`
-
----
-
-##  Acknowledgements
-
-- PTB Diagnostic ECG Database (MIT-BIH / Physionet)
-- scikit-learn team for Random Forest implementation
-
----
-
-This project was built as a machine learning showcase for predictive diagnostics. It shows how classical ML models like Random Forest can be applied to biomedical signal classification, paving the way for more complex future models like CNNs or LSTMs for time series.
-
